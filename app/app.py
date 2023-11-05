@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, request, jsonify
+from flask import Flask, Blueprint, request, jsonify, render_template
 from app import dsa
 import os
 import requests
@@ -7,9 +7,9 @@ bp=Blueprint('app',__name__)
 
 @bp.route('/')
 def index():
-    return 'Hello World!'
+    return render_template('index.html')
 
-@bp.route('/api/analyze',methods=['POST'])
+@bp.route('/api/analyze',methods=['POST','GET'])
 def dsaResult():
     if request.method=='POST':
         text=request.form['text']

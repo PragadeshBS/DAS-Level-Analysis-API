@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 20 11:56:32 2021
-
-@author: asrafatima
-"""
-
 import nltk
 import spacy
 from nltk.stem import WordNetLemmatizer
